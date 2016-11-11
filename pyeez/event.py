@@ -76,3 +76,4 @@ class EventHandler(object):
         :param event: the recieved event object
         """
         return self.f(event, *self.args, **self.kwargs)
+

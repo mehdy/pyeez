@@ -76,3 +76,4 @@ class Window(object):
         """
         with self.refresh():
             self._window.addstr(obj)
+

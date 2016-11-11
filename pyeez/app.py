@@ -12,9 +12,7 @@
 
 import curses
 import time
-import inspect
 import atexit
-from threading import Thread
 
 from .event import Event
 from .window import Window
@@ -31,7 +29,6 @@ class Pyeez(object):
         self.name = name
         self._stdscr = curses.initscr()
         self._windows = dict()
-        self.config = dict()
 
         curses.noecho()
         curses.cbreak()
