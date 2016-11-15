@@ -1,3 +1,48 @@
 # pyeez
 
-pyeez is a toolkit for creating terminal-based applications easily
+pyeez is a micro-framework to create console applications like **htop**.
+
+## Installation
+pyeez is easy to install. it has no dependencies.
+1. via **pip**:
+```
+$ pip install -U pyeez
+```
+2. manual installation
+```
+$ git clone https://github.com/mehdy/pyeez.git
+$ cd pyeez
+$ python setup.py install
+```
+## Getting Started
+building applications with pyeez is super easy.
+write the code code below in a file (let's call it `awesome.py`) and save it.
+```
+from pyeez import Pyeez
+import datetime
+
+# creates an application
+app = Pyeez(__name__)
+
+
+# creates a window named "main"
+# located at top left (10, 5) and bottom right (40, 20)
+# that will be refreshed every second
+@app.window("main", (10, 5), (40, 20), refresh_rate=1)
+def main(w):
+    w.echo("Now: {}".format(datetime.datetime.now().time()))
+    
+if __name__ == '__main__':
+    app.run()
+```
+now just run the execute it.
+```
+$ python awesome.py
+```
+and now you have a realtime clock in terminal :)
+
+## Documentation
+you can read the [docs here](https://pyeez.com)
+
+## Contribution
+feel free to open PRs :)
