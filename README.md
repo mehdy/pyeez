@@ -17,7 +17,7 @@ $ python setup.py install
 ## Getting Started
 building applications with pyeez is super easy.
 write the code code below in a file (let's call it `awesome.py`) and save it.
-```
+```python
 from pyeez import Pyeez
 import datetime
 
