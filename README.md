@@ -4,11 +4,11 @@ pyeez is a micro-framework to create console applications like **htop**.
 
 ## Installation
 pyeez is easy to install. it has no dependencies.
-1. via **pip**:
+* via **pip**:
 ```
 $ pip install -U pyeez
 ```
-2. manual installation
+* manual installation
 ```
 $ git clone https://github.com/mehdy/pyeez.git
 $ cd pyeez
@@ -31,7 +31,7 @@ app = Pyeez(__name__)
 @app.window("main", (10, 5), (40, 20), refresh_rate=1)
 def main(w):
     w.echo("Now: {}".format(datetime.datetime.now().time()))
-    
+
 if __name__ == '__main__':
     app.run()
 ```

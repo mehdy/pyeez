@@ -1,10 +1,28 @@
-.. Pyeez documentation master file, created by
-   sphinx-quickstart on Tue Nov 15 16:51:23 2016.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+Welcome To Pyeez!
+=================
 
-Pyeez! Easy Elegant Console apps
-================================
+Quickstart
+----------
+
+**Pyeez** is great powerful python package for creating console applications like *top*.
+it's simple and super easy to use. for example::
+
+    import datetime
+
+    from pyeez import Pyeez
+
+    app = Pyeez(__name__)
+
+    @app.window('clock', (5, 5), (20, 7), refresh_rate=1)
+    def clock(w):
+        w.echo('{}'.format(datetime.datetime.now().strftime('%T')))
+
+    if __name__ == '__main__':
+        app.run()
+
+Installation and running::
+
+    $ pip install pyeez
+    $ python app.py
 
 .. include:: contents.rst
-
