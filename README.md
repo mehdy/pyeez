@@ -46,3 +46,8 @@ you can read the [docs here](https://pyeez.com)
 
 ## Contribution
 feel free to open PRs :)
+
+### TODOs
+
+* [ ] add more events
+* [ ] add border option for windows
