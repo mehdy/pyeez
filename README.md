@@ -1,6 +1,5 @@
 # pyeez
-
-pyeez is a micro-framework to create console applications like **htop**.
+[pyeez](https://pyeez.com) is a micro-framework to create console applications like **htop**.
 
 ## Installation
 pyeez is easy to install. it has no dependencies.
@@ -41,13 +40,15 @@ $ python awesome.py
 ```
 and now you have a realtime clock in terminal :)
 
-## Documentation
-you can read the [docs here](https://pyeez.com)
-
 ## Contribution
 feel free to open PRs :)
+just keep in mind to update the documentation and tests if needed
 
 ### TODOs
 
 * [ ] add more events
 * [ ] add border option for windows
+* [ ] add tests
+* [ ] handle coloring
+* [ ] handle windows movements
+* [ ] add more examples
