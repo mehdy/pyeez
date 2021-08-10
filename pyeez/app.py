@@ -27,6 +27,7 @@ class Pyeez(object):
 
     def __init__(self, name):
         self.name = name
+        self.exit_keys = ['q']  # default exit key
         self._stdscr = curses.initscr()
         self._windows = dict()
 
@@ -88,6 +89,8 @@ class Pyeez(object):
                 key = self._stdscr.getkey()
             except KeyboardInterrupt:
                 exit()
+            if key in self.exit_keys:
+                exit()
             Event("key_press", "keyboard", key).dispatch()
 
     def on(self, eventName):
@@ -107,4 +110,15 @@ class Pyeez(object):
         """
         self._stdscr.refresh()
         self._consumeKeyboard()
+
+    def set_exit_keys(self, keys):
+        """
+            Exit the program when one of keys in `keys` is pressed.
+            The default exit keys are: `q` and 'Ctrl + c'.
+
+        :param keys: a list of characters
+        """
+        if keys == None:  # no keys for exiting
+            keys = []
+        self.exit_keys = keys
 

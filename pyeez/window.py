@@ -40,7 +40,9 @@ class Window(object):
         self._conf = {k.upper(): v for k, v in conf.items()}
 
         if 'REFRESH_RATE' in self._conf:
-            threading.Thread(target=self._refreshPeriodically).start()
+            thread = threading.Thread(target=self._refreshPeriodically)
+            thread.daemon = True
+            thread.start()
 
     def _refreshPeriodically(self):
         """
